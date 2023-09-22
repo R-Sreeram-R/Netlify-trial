@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment - Diabetic Retinoscopy</title>
+  <link rel="stylesheet" href="Appointment.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+  <header>
+    <h1>Diabetic Retinoscopy</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Retina-Scan.html">Retina Scan</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="ContactUs.html">Contact</a></li>
+        <li><a href="appointment.html">Book Appointment</a></li>
+        <li><a href="Education.html">Diabetic Education</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="appointment">
+      <h2>Book an Appointment</h2>
+      <div class="doctor-details">
+        <div class="doctor-info">
+          <img src="doctor.jpeg" alt="Doctor">
+          <h3>Dr. John Doe</h3>
+          <p>Specialty: Ophthalmologist</p>
+          <p>Experience: 10+ years</p>
+          <p>Location: C- 323 Bits Pilani Dubai Campus </p>
+          <p>Email: dr.johndoe@example.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+        <div class="appointment-form">
+          <form action="#" method="post">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+            <input type="date" id="date" name="date" required>
+            <select id="time" name="time" required>
+              <option value="" disabled selected>Select Time</option>
+              <option value="09:00 AM">09:00 AM</option>
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="11:00 AM">11:00 AM</option>
+            </select>
+            <textarea id="message" name="message" rows="4" placeholder="Additional Message (Optional)"></textarea>
+            <button class="btn submit-btn" type="submit">Book Appointment</button>
+          </form>
+          <div id="map"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="logo.png" alt="Diabetic Retinoscopy Logo">
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Retina-Scan.html">Retina Scan</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="ContactUs.html">Contact</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="Education.html">Diabetic Education</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-text">
+      <p>&copy; 2023 Diabetic Retinoscopy. All rights reserved.</p>
+    </div>
+ 
+  <script>
+    function initMap() {
+      const location = { lat: 37.7749, lng: -122.4194 }; 
+      const map = new google.maps.Map(document.getElementById("map"), {
+        center: location,
+        zoom: 15,
+      });
+      const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: "Diabetic Retinoscopy Location", 
+      });
+    }
+  </script>
+  </footer>
+</body>
+</html>
